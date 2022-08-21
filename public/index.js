@@ -25,7 +25,7 @@ socket.on(`user-joined` , name=>{
 })
 
 socket.on(`receive` , data =>{
-    append(`${data.name} : ${data.message} ` , 'self-start' + ' ' + 'md:rounded-bl-none' + ' ' +  'rounded-br-xl') ; 
+    append(`${data.name} : ${data.message} ` , 'self-start' + ' ' + 'md:rounded-bl-none' + ' ' +  'rounded-br-xl' + ' ' + 'rounded-bl-none' ) ; 
 })
 
 const input = document.querySelector("input") ;
@@ -40,6 +40,6 @@ document.querySelector("form").addEventListener('submit' , (e)=>{
 })
 
 socket.on('left' , name =>{
-    append(`${name} left the chat` , 'self-start'   + ' ' + 'rounded-bl-none' + ' ' + 'md:rounded-bl-none' +  'rounded-br-xl' + ' ' + 'bg-red-300' + ' ' + 'text-black') ; 
+    append(`${name} left the chat` , 'self-start'   + ' ' + 'rounded-bl-none' + ' ' + 'md:rounded-bl-none' + ' ' +   'rounded-br-xl' + ' ' + 'bg-red-300' + ' ' + 'text-black') ; 
 })
 
