@@ -2,6 +2,7 @@ const socket = io() ;
 
 const messagespace = document.querySelector(".message") ;
 var messageElement ; 
+const sound = new Audio("s.mp3") ;
 
 const append = (message , position)=>{
     messageElement = document.createElement('div') ; 
@@ -21,11 +22,13 @@ socket.emit(`new-user-joined` , name) ;
 
 socket.on(`user-joined` , name=>{
     append(`${name} joined the chat` , 'self-end' + ' ' + 'bg-blue-300' + ' ' +  'md:rounded-br-none') ; 
+    sound.play() ;
     
 })
 
 socket.on(`receive` , data =>{
     append(`${data.name} : ${data.message} ` , 'self-start' + ' ' + 'md:rounded-bl-none' + ' ' +  'rounded-br-xl' + ' ' + 'rounded-bl-none' ) ; 
+    sound.play() ;
 })
 
 const input = document.querySelector("input") ;
@@ -41,5 +44,6 @@ document.querySelector("form").addEventListener('submit' , (e)=>{
 
 socket.on('left' , name =>{
     append(`${name} left the chat` , 'self-start'   + ' ' + 'rounded-bl-none' + ' ' + 'md:rounded-bl-none' + ' ' +   'rounded-br-xl' + ' ' + 'bg-red-300' + ' ' + 'text-black') ; 
+    sound.play() ;
 })
 
