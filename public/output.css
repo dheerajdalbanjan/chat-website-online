@@ -607,11 +607,6 @@ video {
   margin-right: 1.25rem;
 }
 
-.mx-7 {
-  margin-left: 1.75rem;
-  margin-right: 1.75rem;
-}
-
 .ml-3 {
   margin-left: 0.75rem;
 }
@@ -644,6 +639,10 @@ video {
   height: 4rem;
 }
 
+.w-\[101\%\] {
+  width: 101%;
+}
+
 .w-full {
   width: 100%;
 }
@@ -652,14 +651,14 @@ video {
   width: 2rem;
 }
 
+.w-\[100\%\] {
+  width: 100%;
+}
+
 .w-fit {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-}
-
-.min-w-\[60\%\] {
-  min-width: 60%;
 }
 
 .max-w-\[18rem\] {
@@ -722,6 +721,10 @@ video {
 
 .overflow-y-auto {
   overflow-y: auto;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden;
 }
 
 .rounded-xl {
@@ -916,10 +919,10 @@ video {
     max-width: 40rem;
   }
 
-  .md\:space-x-8 > :not([hidden]) ~ :not([hidden]) {
+  .md\:space-x-7 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-x-reverse: 0;
-    margin-right: calc(2rem * var(--tw-space-x-reverse));
-    margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
+    margin-right: calc(1.75rem * var(--tw-space-x-reverse));
+    margin-left: calc(1.75rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
   .md\:rounded-full {
