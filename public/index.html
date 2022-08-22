@@ -13,32 +13,33 @@
     <title>Chit-chat</title>
 </head>
 <body>
-    <div class="container h-full w-[101%] md:max-w-7xl flex flex-col justify-center mx-auto overflow-x-hidden ">
-        <nav class="flex fixed left-0 top-0 backdrop-blur bg-opacity-50  w-full flex-row space-x-6 h-14 md:h-20 justify-center align-middle items-center bg-gray-200">
+    <div class="container h-full w-[100%] md:max-w-7xl flex flex-col justify-center mx-auto overflow-x-hidden ">
+        <nav class="flex fixed left-0 top-0 backdrop-blur bg-opacity-50  w-full flex-row md:space-x-4 space-x-3 h-14 md:h-20 justify-center align-middle items-center bg-gray-200">
             <div class="logo w-8 h-8">
                 <img src="icons8-chat-48.png" >
             </div>
 
-            <div class=" text-2xl">
+            <div class=" text-2xl font-semibold">
                 Chit-chat
             </div>
         </nav>
-        <div class="message  h-[88vh] w-[100%] overflow-y-auto bg-gray-100 flex flex-col space-y-6 md:pt-36 pt-24 pb-9 md:px-9 px-3">
-            <div class="message-contentl flex font-thin self-start bg-slate-500 h-auto w-fit md:rounded-full rounded-xl max-w-[18rem] md:max-w-[40rem] rounded-bl-none   md:py-4 md:px-8 p-3 md:rounded-bl-none text-white text-center">
+        <div class="message  h-[100vh] w-[100%] overflow-y-auto transition-transform scroll-smooth bg-gray-100 flex flex-col space-y-6 md:pt-36 pt-24 pb-36  md:px-9 px-3">
+            <div class="message-contentl shadow-lg flex font-normal self-start bg-slate-500 h-auto w-fit md:rounded-full rounded-xl max-w-[18rem] md:max-w-[40rem] rounded-bl-none   md:py-4 md:px-8 p-3 md:rounded-bl-none text-white text-center">
                Others chats will be displayed here
             </div>
-            <div class="message-contentr self-end  bg-slate-500 font-thin h-auto w-fit md:rounded-full md:rounded-br-none rounded-xl max-w-[18rem] md:max-w-[40rem]  rounded-br-none    md:py-4 md:px-8 p-3 text-white " >
+            <div class="message-contentr self-end shadow-lg  bg-slate-500 font-normal h-auto w-fit md:rounded-full md:rounded-br-none rounded-xl max-w-[18rem] md:max-w-[40rem]  rounded-br-none    md:py-4 md:px-8 p-3 text-white " >
                 Your chats will be displayed here
             </div>
         </div>
-        <div class="form w-full flex items-center ml-4 md:ml-4  justify-between h-auto my-3">
+        <div class="form fixed bottom-4 h-16 bg-transparent  self-center flex  py-2  px-2  ">
             <form action="/" method="post" class="flex justify-items-stretch space-x-4 md:space-x-7">
-                <input placeholder="Enter the message" type="text" id="message" class="pl-4 min-w-[15rem] will-change-auto md:min-w-[70rem] py-2 hover:border-blue-500 border rounded-sm transition-all duration-300 focus:ring-4 ring-blue-300  focus:outline-none">
-                <button type="submit" class="button px-8 py-2 max-w-7xl bg-blue-500 text-white rounded-full mx-5 hover:px-9 md:hover:bg-blue-700 focus:ring-4 ring-blue-200 transition-all duration-200">Send</button>
+                <input placeholder="Enter the message" type="text" id="message" class="pl-4 min-w-[16.5rem] will-change-auto md:min-w-[70rem] py-3 hover:shadow-xl border rounded-full shadow-lg transition-all duration-300 focus:ring-4 ring-blue-300  focus:outline-none">
+                <button type="submit" class="button px-8 py-2 max-w-7xl bg-slate-200 md:hover:pl-9 shadow-lg text-white rounded-full mx-5  md:hover:bg-slate-300 focus:ring-4 ring-blue-200 transition-all duration-200"><img src="send-message.png" width="25px"></button>
             </form>
         </div>
-    </div>
 
+        <button onclick="topScroll()" class="fixed bottom-24 rounded-full bg-slate-200 hover:bg-slate-300 shadow-lg py-3 px-4 left-3 md:left-[153px]"><img src="up-arrow.png" width="25px"></button>
+    </div>
 
 
     

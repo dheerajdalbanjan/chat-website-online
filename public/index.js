@@ -4,19 +4,26 @@ const messagespace = document.querySelector(".message") ;
 var messageElement ; 
 const sound = new Audio("s.mp3") ;
 
+
+function topScroll(){
+    messagespace.scrollTop = 0 ; 
+}
+
+
 const append = (message , position)=>{
     messageElement = document.createElement('div') ; 
     messageElement.innerText = message  ;
-    messageElement.classList.add('flex' , 'font-thin'  ,  'bg-slate-500'  , 'h-auto' , 'w-fit' ,'md:rounded-full' ,'rounded-lg'    , 'text-white' , 'max-w-[18rem]' , 'md:max-w-[40rem]' , 'md:py-4', 'md:px-8' ,'p-3');
+    messageElement.classList.add('flex' , 'font-normal'  ,  'bg-slate-500' , 'shadow-lg' , 'h-auto' , 'w-fit' ,'md:rounded-full' ,'rounded-lg'    , 'text-white' , 'max-w-[18rem]' , 'md:max-w-[40rem]' , 'md:py-4', 'md:px-8' ,'p-3');
     const array = position.split(" ") ;
     array.forEach(arrayf=> {
         messageElement.classList.add(arrayf) ;
     }); 
     messagespace.append(messageElement) ;
+        messagespace.scrollTop = 1000 ; 
 }
 
 
-const name = prompt("Enter your name" ) ; 
+//const name = prompt("Enter your name" ) ; 
 
 socket.emit(`new-user-joined` , name) ;
 
